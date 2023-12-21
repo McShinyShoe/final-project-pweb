@@ -1,0 +1,3 @@
+CREATE USER 'shinychat'@'%' IDENTIFIED BY 'admin123';
+GRANT ALL PRIVILEGES ON ShinyChat.* TO 'shinychat'@'%';
+FLUSH PRIVILEGES;

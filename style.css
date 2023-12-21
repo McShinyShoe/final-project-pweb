@@ -1,0 +1,48 @@
+nav.navbar {
+    background-color: #333333;
+}
+
+nav.navbar a {
+    color: #aaaaaa;
+}
+
+nav.navbar a:hover {
+    color: #888888;
+}
+
+nav.navbar a:focus {
+    color: #888888;
+}
+
+nav a.dropdown-item {
+    color: #555555;
+}
+
+nav a.dropdown-item:hover {
+    color: #333333;
+}
+
+.soft-sahdow {
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.2);
+}
+
+.full-height { display: flex; flex-direction: column; height: 100%; }
+.fill-height { flex-grow: 1; width: 100%; }
+nav a.dropdown-item:focus {
+    color: 333333;
+}
+
+.contact {
+    background-color: #888888;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.contact:hover {
+    background-color: #cccccc;
+}
+
+.textinput {
+    position:fixed;
+    bottom:0;
+}
