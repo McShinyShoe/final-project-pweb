@@ -1,0 +1,27 @@
+version: '3.9'
+
+services:
+  web:
+    image: nginx:latest
+    container_name: final-project-pweb-nginx
+    volumes:
+      - /home/shinyshoe/final-project-pweb/src:/var/www/html
+      - /home/shinyshoe/final-project-pweb/default.conf:/etc/nginx/conf.d/default.conf
+    links:
+      - php-fpm
+    networks:
+      yggdrasil-heimdall:
+      
+  php-fpm:
+    image: phpfpm-ext:latest
+    container_name: final-project-pweb-php
+    volumes:
+      - /home/shinyshoe/final-project-pweb/src:/var/www/html
+    networks:
+      yggdrasil-heimdall:
+
+    
+networks:
+  yggdrasil-heimdall:
+    name: yggdrasil-heimdall
+    external: true
