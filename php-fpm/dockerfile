@@ -1,0 +1,6 @@
+FROM php:fpm
+RUN pecl install -o -f redis \
+    &&  rm -rf /tmp/pear \
+    &&  docker-php-ext-enable redis \
+    &&  docker-php-ext-install mysqli pdo pdo_mysql
+CMD ["php-fpm"]
